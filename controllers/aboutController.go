@@ -11,7 +11,7 @@ func GetAbout(c *fiber.Ctx) error {
 	response := models.Response{
 		Success: true,
 		Message: "Data about fetched successfully",
-		Data:    data.About,
+		Data:    data.GetAbout(),
 	}
 	return c.Status(fiber.StatusOK).JSON(response)
 }

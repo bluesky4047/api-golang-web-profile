@@ -11,7 +11,7 @@ func GetTestimonials(c *fiber.Ctx) error {
 	response := models.Response{
 		Success: true,
 		Message: "Data testimonials fetched successfully",
-		Data:    data.Testimonials,
+		Data:    data.GetTestimonials(),
 	}
 	return c.Status(fiber.StatusOK).JSON(response)
 }

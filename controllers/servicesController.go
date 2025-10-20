@@ -11,7 +11,7 @@ func GetServices(c *fiber.Ctx) error {
 	response := models.Response{
 		Success: true,
 		Message: "Data services fetched successfully",
-		Data:    data.Services,
+		Data:    data.GetServices(),
 	}
 	return c.Status(fiber.StatusOK).JSON(response)
 }

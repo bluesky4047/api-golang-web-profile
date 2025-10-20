@@ -5,6 +5,7 @@ type Portfolio struct {
 	Title			string `json:"title"`
 	Description 	string `json:"description"`
 	Category 	string `json:"categorys"`
+	Link		string `json:"link"`
 }
 
 type PortfolioList struct {

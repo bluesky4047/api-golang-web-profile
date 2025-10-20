@@ -11,7 +11,7 @@ func GetHome(c *fiber.Ctx) error {
 	response := models.Response{
 		Success: true,
 		Message: "Data home fetched successfully",
-		Data:    data.Home,
+		Data:    data.GetHome(),
 	}
 	return c.Status(fiber.StatusOK).JSON(response)
 }

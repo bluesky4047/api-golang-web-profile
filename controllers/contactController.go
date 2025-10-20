@@ -11,7 +11,7 @@ func GetContact(c *fiber.Ctx) error {
 	response := models.Response{
 		Success: true,
 		Message: "Data contact fetched successfully",
-		Data:    data.Contact,
+		Data:    data.GetContact(),
 	}
 	return c.Status(fiber.StatusOK).JSON(response)
 }

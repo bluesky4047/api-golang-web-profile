@@ -10,11 +10,11 @@ var Home = models.Home{
 		{Name: "Projects Completed", Value: "250+"},
 		{Name: "Happy Clients", Value: "58"},
 	},
-	Img: "/data/img/gilang/profile-1.webp",
+	Img: "/data/img/person-CqOZwXV1.png",
 }
 
 var About = models.About{
-	Img: "/data/img/gilang/profile-2.webp",
+	Img: "/data/img/person2-DvYIsw9m.png",
 	Title: "I am Professional User Experience Designer",
 	Description: "I design and develop services for customers specializing creating stylish, modern websites, web services and online stores. My passion is to design digital user experiences.I design and develop services for customers specializing creating stylish, modern websites, web services.",
 	Links: []models.Link{
@@ -87,5 +87,41 @@ var Contact = models.Contact{
 		{Name: "Instagram", Description:"instagram.com"},
 		{Name: "linkedin", Description:"linkedin"},
 	},
+}
+
+// DummyRepository adalah versi pertama dari sumber data dummy
+type DummyRepository struct{}
+
+// Implementasi interface Repository
+func (r DummyRepository) GetAbout() models.About {
+	return About
+}
+
+func (r DummyRepository) GetHome() models.Home {
+	return Home
+}
+
+func (r DummyRepository) GetProcess() models.Process {
+	return Process
+}
+
+func (r DummyRepository) GetPortfolio() models.PortfolioList {
+	return Portfolio
+}
+
+func (r DummyRepository) GetBlog() models.Blogs {
+	return Blog
+}
+
+func (r DummyRepository) GetServices() models.Services {
+	return Services
+}
+
+func (r DummyRepository) GetTestimonials() models.Testimonials {
+	return Testimonials
+}
+
+func (r DummyRepository) GetContact() models.Contact {
+	return Contact
 }
 

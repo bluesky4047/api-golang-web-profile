@@ -11,7 +11,7 @@ func GetProcess(c *fiber.Ctx) error {
 	response := models.Response{
 		Success: true,
 		Message: "Data process fetched successfully",
-		Data:    data.Process,
+		Data:    data.GetProcess(),
 	}
 	return c.Status(fiber.StatusOK).JSON(response)
 }

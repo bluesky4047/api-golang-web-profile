@@ -11,7 +11,7 @@ func GetBlog(c *fiber.Ctx) error {
 	response := models.Response{
 		Success: true,
 		Message: "Data blog fetched successfully",
-		Data:    data.Blog,
+		Data:    data.GetBlog(),
 	}
 	return c.Status(fiber.StatusOK).JSON(response)
 }

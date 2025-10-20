@@ -11,7 +11,7 @@ func GetPortfolio(c *fiber.Ctx) error {
 	response := models.Response{
 		Success: true,
 		Message: "Data portfolio fetched successfully",
-		Data:    data.Portfolio,
+		Data:    data.GetPortfolio(),
 	}
 	return c.Status(fiber.StatusOK).JSON(response)
 }

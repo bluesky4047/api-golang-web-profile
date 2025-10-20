@@ -1,6 +1,7 @@
 package main
 
 import (
+	"my-fiber-app/data"
 	"my-fiber-app/routes"
 
 	"github.com/gofiber/fiber/v2"
@@ -17,6 +18,9 @@ func main() {
 		AllowOrigins: "*", 
 		AllowHeaders: "Origin, Content-Type, Accept, Authorization",
 	}))
+
+	// Ganti di sini mau pakai data mana
+	data.UseDummyData1() // atau data.UseDummyDataCopy()
 
 	// Routing
 	routes.SetupRoutes(app)
